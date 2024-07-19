@@ -1,0 +1,11 @@
+ANS 1=> html stand for hyper text markup language and it used to define the structure of web page.
+
+ANS 2=>the main feature of html are as following
+      1  it easy to learn
+      2  platform independent
+      3 everything in html is defined inside a tag .
+      4 tag have have some property knwon as attribute.
+      
+ANS 3=>MIME  statd for multiple internet mail extensions taking care of transeferring differant kind of data through elctronic mail services
+       
+ANS 5=> A void element in html is an element in html that cannot have any child nodes.
