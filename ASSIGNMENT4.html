@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        form {
+            max-width: 300px;
+            margin: auto;
+            padding: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        div {
+            margin-bottom: 1em;
+        }
+      
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+            <label for="name">Name (lowercase only):</label>
+            <input type="text" id="name" name="name" pattern="[a-z]+" required>
+        </div>
+        <div>
+            <label for="username">Username (lowercase only):</label>
+            <input type="text" id="username" name="username" pattern="[a-z]+" required>
+        </div>
+        <div>
+            <label for="password">Password (lowercase only):</label>
+            <input type="password" id="password" name="password" pattern="[a-z]+" required>
+        </div>
+        <div>
+            <label for="age">Age (18-60):</label>
+            <input type="number" id="age" name="age" min="18" max="60" required>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

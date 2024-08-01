@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+             <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+             </div>
+           
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+        
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+           
+        
+
+        
+            <legend>Gender:</legend>
+            
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            
+            
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            
+            <div>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+        
+
+    
+            <legend>Hobbies:</legend>
+            <div>
+                <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+                <label for="hobby1">Reading</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hobby2" name="hobbies" value="traveling">
+                <label for="hobby2">Traveling</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hobby3" name="hobbies" value="sports">
+                <label for="hobby3">Sports</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hobby4" name="hobbies" value="music">
+                <label for="hobby4">Music</label>
+            </div>
+
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
