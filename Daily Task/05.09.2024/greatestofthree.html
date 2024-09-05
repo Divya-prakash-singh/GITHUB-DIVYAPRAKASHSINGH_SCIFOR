@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition Checking 05/09/2024</title>
+</head>
+<body>
+    <script>
+        // Get user input
+        const a = parseInt(prompt("Enter value for a:"), 10);
+        const b = parseInt(prompt("Enter value for b:"), 10);
+        const c = parseInt(prompt("Enter value for c:"), 10);
+
+        // Check if a is greater than b and b is greater than c
+        if (a > b && b > c) {
+            document.write("a is the largest");
+        }
+        // Check if a is less than b or b is less than c
+        else if (a < b || b < c) {
+            document.write("One of the conditions is true");
+        }
+        // Check if a is not equal to c
+        else if (a !== c) {
+            document.write("a and c are not equal");
+        }
+    </script>
+</body>
+</html>
