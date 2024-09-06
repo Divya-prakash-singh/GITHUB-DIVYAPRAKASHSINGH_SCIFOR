@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST 8</title>
+    <script>
+        // Get input from the user
+        let value1 = prompt("Enter the first value:");
+        let value2 = prompt("Enter the second value:");
+
+        // Convert inputs to numbers if possible
+        let num1 = Number(value1);
+        let num2 = Number(value2);
+
+        // Determine if the input values are numbers
+        let isValue1Numeric = !isNaN(num1);
+        let isValue2Numeric = !isNaN(num2);
+
+        // Check for equality
+        document.write("\nEquality and Inequality Checks:");
+        document.write(`${value1} == ${value2}: ${value1 == value2}`);
+        document.write(`${value1} === ${value2}: ${value1 === value2}`);
+        document.write(`${value1} != ${value2}: ${value1 != value2}`);
+        document.write(`${value1} !== ${value2}: ${value1 !== value2}`);
+
+        if (isValue1Numeric && isValue2Numeric) {
+           document.write("\nComparison Checks:");
+            document.write(`${num1} < ${num2}: ${num1 < num2}`);
+            document.write(`${num1} > ${num2}: ${num1 > num2}`);
+            document.write(`${num1} <= ${num2}: ${num1 <= num2}`);
+            document.write(`${num1} >= ${num2}: ${num1 >= num2}`);
+        } else {
+            document.write("\nComparison Checks:");
+            document.write("Comparison operators can only be applied to numeric values.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
