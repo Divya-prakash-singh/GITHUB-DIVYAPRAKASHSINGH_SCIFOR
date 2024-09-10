@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+<body>
+    <script>
+        
+    let dayNumber = parseInt(prompt("Enter a number between 1 and 7 to get the corresponding day of the week:"));
+
+    // Initialize the variable to hold the day name
+    let dayName;
+    
+    // Use a switch statement to determine the day of the week
+    switch (dayNumber) {
+        case 1:
+            dayName = console.log("Monday");
+            break;
+        case 2:
+            dayName = console.log("Tuesday");
+            break;
+        case 3:
+            dayName = console.log("Wednesday");
+            break;
+        case 4:
+            dayName = console.log("Thursday");
+            break;
+        case 5:
+            dayName = console.log("Friday");
+            break;
+        case 6:
+            dayName = console.log("Saturday");
+            break;
+        case 7:
+            dayName = console.log("Sunday");
+            break;
+        default:
+            dayName = console.log("Invalid input. Please enter a number between 1 and 7.");
+    }
+
+    </script>
+</body>
+</html>
