@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 9</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Calculator</title>
+</head>
+<body>
+    <h1 style=" color: blue;">Square Calculator</h1>
+    <script>
+        function calculateSquare() {
+            const inputValue = prompt('Enter a number:');
+
+            const number = parseFloat(inputValue);
+
+            if (isNaN(number)) {
+                alert('Please enter a valid number');
+                return;
+            }
+
+            const square = number * number;
+            alert('Square: ' + square);
+        }
+
+        window.onload = calculateSquare;
+    </script>
+</body>
+</html>
