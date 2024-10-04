@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React State Example</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor(props) {
+                super(props);
+                // Initialize state
+                this.state = {
+                    name: 'Franklin smith',
+                    age: 30,
+                    birthYear: 1993
+                };
+            }
+
+            // Method to change name and birth year
+            changeDetails = () => {
+                this.setState({
+                    name: 'woodrow wilson',
+                    birthYear: 1995
+                });
+            };
+
+            render() {
+                return (
+                    <div>
+                        <h1>Name: {this.state.name}</h1>
+                        <h2>Age: {this.state.age}</h2>
+                        <h2>Birth Year: {this.state.birthYear}</h2>
+                        <button onClick={this.changeDetails}>Change Name and Birth Year</button>
+                    </div>
+                );
+            }
+        }
+
+        // Render the App component
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
