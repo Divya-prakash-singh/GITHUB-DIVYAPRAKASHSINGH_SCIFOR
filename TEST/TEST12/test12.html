@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST12</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        class Component2 extends React.Component {
+            render() {
+                const { name, lname } = this.props;
+                return (
+                    <div>
+                        <h2>Received Data</h2>
+                        <p>First Name: {name}</p>
+                        <p>Last Name: {lname}</p>
+                    </div>
+                );
+            }
+        }
+
+        class Component1 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    name: '',
+                    lname: '',
+                    showOutput: false,
+                };
+            }
+
+            handleInputChange = (event) => {
+                const { name, value } = event.target;
+                this.setState({ [name]: value });
+            };
+
+            handleSubmit = () => {
+                this.setState({ showOutput: true });
+            };
+
+            render() {
+                const { name, lname, showOutput } = this.state;
+
+                return (
+                    <div>
+                        <h1>Input Form</h1>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="First Name"
+                            value={name}
+                            onChange={this.handleInputChange}
+                        />
+                        <input
+                            type="text"
+                            name="lname"
+                            placeholder="Last Name"
+                            value={lname}
+                            onChange={this.handleInputChange}
+                        />
+                        <button onClick={this.handleSubmit}>Submit</button>
+
+                        {showOutput && <Component2 name={name} lname={lname} />}
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<Component1 />, document.getElementById('root'));
+
+    </script>
+</body>
+</html>
